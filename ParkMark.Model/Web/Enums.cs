@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ParkMark.Model.Web
+{
+    public enum APIControllers
+    {
+
+    }
+
+    public enum DashboardAPIControllers
+    {
+        Authentication
+    }
+    public enum CPanelAPIControllers
+    {
+        CPAuthentication,
+        CPParking
+    }
+}

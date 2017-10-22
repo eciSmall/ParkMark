@@ -1,0 +1,18 @@
+﻿@model ParkMark.Model.Web.Parking.ParkingViewModel
+@{
+    Layout = null;
+}
+<h2>ParkingManager</h2>
+@using (Html.BeginForm("AddParking", "CPParking"))
+{
+    if (Model != null)
+    {
+        <div>@Model.EndUserMessage</div>
+    }
+    @Html.LabelFor(m => m.Latitude);
+    @Html.TextBoxFor(m => m.Latitude, new { @class = "form-control" });
+    @Html.LabelFor(m => m.Longitude);
+    @Html.TextBoxFor(m => m.Longitude, new { @class = "form-control" });
+    <input type="submit" />
+}
+

@@ -1,0 +1,19 @@
+﻿@model ParkMark.Model.Web.Customer.CustomerLogin
+@{
+    ViewBag.Title = "CustomerLogin";
+}
+
+<h2>CustomerLogin</h2>
+@using (Html.BeginForm("CheckAuthenticate", "Authentication"))
+{
+    if (Model.Status != null)
+    {
+        <div>@Model.EndUserMessage</div><br />
+    }
+    @Html.LabelFor(x => x.Email);<br />
+    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" });<br />
+    @Html.LabelFor(x => x.Password);<br />
+    @Html.TextBoxFor(m => m.Password, new { @class = "form-control" });<br />
+    <input type="submit" /><br />
+}
+@Html.ActionLink("Register", "Register", "Authentication")
